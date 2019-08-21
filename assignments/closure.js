@@ -1,5 +1,11 @@
 // ==== Challenge 1: Write your own closure ====
 // Write a simple closure of your own creation.  Keep it simple!
+const eli = 'fos';
+function returneli () {
+  return eli;
+}
+returnFoo();
+
 
 
 /* STRETCH PROBLEMS, Do not attempt until you have completed all previous tasks for today's project files */
