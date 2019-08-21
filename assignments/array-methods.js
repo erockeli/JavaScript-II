@@ -87,8 +87,39 @@ console.log(ticketPriceTotal);
 // ==== Challenge 5: Be Creative ====
 // Now that you have used .forEach(), .map(), .filter(), and .reduce().  I want you to think of potential problems you could solve given the data set and the 5k fun run theme.  Try to create and then solve 3 unique problems using one or many of the array methods listed above.
 
-// Problem 1
+// Problem 1: Filter out names that have M as the first letter
+// Since this event is government sponsered, all government employees have to be disqualified for potential bias. Return a list of names we need to contact
 
-// Problem 2
+const government = runners
+  .filter(function(item, index, array) {
+    let strSplit = item.email.split(".");
+    return strSplit[1] == "gov";
+  })
+  .map(function(item, index, array) {
+    return [item.first_name, item.last_name];
+  });
+
+console.log(government);
+
+
+
+// Problem 2 Alphabetize the last Names
+const emailAddresses = runners
+  .filter(function(item, index, array) {
+    return item.company_name.length > 6;
+  })
+  .map(function(item, index, array) {
+    return item.email;
+  });
+
+console.log(emailAddresses);
 
 // Problem 3
+// If a runner donated $200 or more they get a special emblem on their shirt.
+// How many shirts should we be prepared to print with special emblems?
+
+const emblem = runners.filter(function(item, array, index) {
+    return item.donation >= 200;
+  });
+  
+  console.log(emblem.length);

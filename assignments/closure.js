@@ -1,19 +1,10 @@
 // ==== Challenge 1: Write your own closure ====
 // Write a simple closure of your own creation.  Keep it simple!
-const house{
-
-  var name = 'Mozilla';
-  function displayName() {
-    alert(name);
-  }
-  return displayName;
+const eli = 'fos';
+function returneli () {
+  return eli;
 }
-
-var myFunc = house();
-myFunc();
-  
-}
-
+returnFoo();
 
 
 

@@ -64,8 +64,9 @@ sumNums(8, 8, function(sum){
 function multiplyNums(x, y, cb) {
 
   cb(x*y)
-  // multiplyNums multiplies two numbers and passes the result to the callback.
 }
+  // multiplyNums multiplies two numbers and passes the result to the callback.
+
 
 multiplyNums(10, 13, function(product){
   console.log(product)
@@ -74,18 +75,22 @@ multiplyNums(10, 13, function(product){
 function contains(items, list, cb) {
 for(let i=0; i < items.length; i++){
 
-  if(items[i]==item){
+  if(items[i]==items){
   return cb(true)
 }
-  return cb(false)
+  else return cb(false)
 
 };
 
-contains(items,"Pencil", function(result){console.log(result)})
+}
+
+contains('Pencil', items, function(result){
+  
+  console.log(result)})
 
   // contains checks if an item is present inside of the given array/list.
   // Pass true to the callback if it is, otherwise pass false.
-}
+
 
 /* STRETCH PROBLEM */
 
@@ -93,4 +98,11 @@ function removeDuplicates(array, cb) {
   // removeDuplicates removes all duplicate values from the given array.
   // Pass the duplicate free array to the callback function.
   // Do not mutate the original array.
+  cb(new Set(array));
 }
+
+removeDuplicates(items, function(uniqueArray) {
+  console.log(uniqueArray);
+});
+
+removeDuplicates(items, uniqueArray => console.log(uniqueArray));
